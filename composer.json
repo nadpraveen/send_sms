@@ -1,0 +1,19 @@
+{
+    "name": "techunico/sms_sender",
+    "description": "this is package to send sms ny simply triggering a simple function",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Techunico\\SmsSender\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Praveen Kumar",
+            "email": "praveen.42000@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {}
+}
