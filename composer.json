@@ -11,9 +11,11 @@
     "authors": [
         {
             "name": "Praveen Kumar",
-            "email": "praveen.42000@gmail.com"
+            "email": "praveen@techunico.com"
         }
     ],
     "minimum-stability": "alpha",
-    "require": {}
+    "require": {
+        "php-curl-class/php-curl-class": "^9.6"
+    }
 }

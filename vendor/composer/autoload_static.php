@@ -11,12 +11,20 @@ class ComposerStaticInit74bed94fa8c632f7cde9fe66aa2561a9
         array (
             'Techunico\\SmsSender\\' => 20,
         ),
+        'C' => 
+        array (
+            'Curl\\' => 5,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Techunico\\SmsSender\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Curl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl',
         ),
     );
 

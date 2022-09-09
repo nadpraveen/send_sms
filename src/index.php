@@ -1,19 +1,23 @@
 <?php
 namespace Techunico\SmsSender;
 
+use Curl\Curl;
+
 class sms_sender{
     public function __construct() {
         
     }
     
-    public function sender($message,$contact,$smsType, $priority){
-        
+    public function sendSingleSms($message,$contact,$smsType='normal', $priority='ndnd'){
+        $curl = new Curl();
+        $curl->get(config('tunico.sms_gateway'), [
+            'user' => config('tunico.sms_gateway_user_name'),
+            'pass' => config('tunico.sms_gateway_password'),
+            'sender' => config('tunico.sms_sender_id'),
+            'phone' => $contact,
+            'text' => url_encode($message),
+            'priority' => $priority ? $priority : 'ndnd',
+            'stype' => $smsType ? $smsType : 'normal',
+        ]);
     }
 }
-
-
-
-// Note : smstype - normal/flash/unicode , Priority - ndnd/dnd , Mobile Number without 914
-// sender=Sender ID&phone=Mobile No&text=Test SMS&priority=Priority&stype=smstype
-
-// http://alerts.techunico.com/api/sendmsg.php?user=techunico_alerts&pass=********&sender=Sender ID&phone=Mobile No&text=Test SMS&priority=Priority&stype=smstype

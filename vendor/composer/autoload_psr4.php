@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Techunico\\SmsSender\\' => array($baseDir . '/src'),
+    'Curl\\' => array($vendorDir . '/php-curl-class/php-curl-class/src/Curl'),
 );
