@@ -3,11 +3,11 @@ namespace Techunico\SmsSender;
 
 use Curl\Curl;
 
-class sms_sender{
+class SendSms{
     public function __construct() {
-        
+
     }
-    
+
     public function sendSingleSms($message,$contact,$smsType='normal', $priority='ndnd'){
         $curl = new Curl();
         $curl->get(config('tunico.sms_gateway'), [
