@@ -10,12 +10,12 @@ class SendSms{
 
     public function sendSingleSms($message,$contact,$smsType='normal', $priority='ndnd'){
         $curl = new Curl();
-        $curl->get(config('tunico.sms_gateway'), [
-            'user' => config('tunico.sms_gateway_user_name'),
-            'pass' => config('tunico.sms_gateway_password'),
-            'sender' => config('tunico.sms_sender_id'),
+        $curl->get(env('SMS_GATEWAY'), [
+            'user' => env('SMS_GATEWAY_USER_NAME'),
+            'pass' => env('SMS_GATEWAY_PASSWORD'),
+            'sender' => env('SMS_SENDER_ID'),
             'phone' => $contact,
-            'text' => urlencode($message),
+            'text' => $message,
             'priority' => $priority ? $priority : 'ndnd',
             'stype' => $smsType ? $smsType : 'normal',
         ]);
