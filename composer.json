@@ -1,6 +1,6 @@
 {
     "name": "techunico/sms_sender",
-    "description": "this is package to send sms ny simply triggering a simple function",
+    "description": "this is package to send sms by simply triggering a simple function",
     "type": "library",
     "license": "MIT",
     "autoload": {
