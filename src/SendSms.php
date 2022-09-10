@@ -15,7 +15,7 @@ class SendSms{
             'pass' => config('tunico.sms_gateway_password'),
             'sender' => config('tunico.sms_sender_id'),
             'phone' => $contact,
-            'text' => url_encode($message),
+            'text' => urlencode($message),
             'priority' => $priority ? $priority : 'ndnd',
             'stype' => $smsType ? $smsType : 'normal',
         ]);
